@@ -37,7 +37,10 @@ Contributions, issues and feature requests are welcome!<br />Feel free to check 
 Give a ⭐️ if this project helped you!
 
 ## 📝 License
-Licensed under the Apache License, Version 2.0 (the "License");
+Copyright © 2020 [Sanoj Prabath Jayathilaka](https://github.com/00sanoj00).<br />
+This project is [Apache license 2.0](https://www.apache.org/licenses/LICENSE-2.0) licensed.
+
+Licensed under the Apache License, Version 2.0 (the "SL-COVID-19-Report");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
