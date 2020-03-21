@@ -12,9 +12,9 @@
 > Making the public aware of the situation inside Sri Lanka due to COVID-19 virus
 
 ### 🏠 [Homepage](https://www.facebook.com/sanoj.jayathilaka1)
-
+##
 ### 👋 ScreenShot
-
+##
 ![alt text](https://raw.githubusercontent.com/00sanoj00/SL-COVID-19-Report/master/My_res/Group%209.png)
 
 ### ✨ Download APK
@@ -29,17 +29,16 @@
 * Github: [@00sanoj00](https://github.com/00sanoj00)
 
 ## 🤝 Contributing
-
-[🤝Arimac](https://www.facebook.com/TeamArimac/)
-
-[🤝The API is used on the Health Promotion Bureau's website](https://hpb.health.gov.lk/en/api-documentation)
-
-
 Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/00sanoj00/SL-COVID-19-Report/issues). 
 
 ## Show your support
-
 Give a ⭐️ if this project helped you!
+##
+## 🤝 Thank You
+
+[✨Arimac](https://www.facebook.com/TeamArimac/)
+
+[✨The API is used on the Health Promotion Bureau's website](https://hpb.health.gov.lk/en/api-documentation)
 
 ## 📝 License
 Copyright © 2020 [Sanoj Prabath Jayathilaka](https://github.com/00sanoj00).<br />
