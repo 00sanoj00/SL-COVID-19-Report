@@ -13,6 +13,13 @@
 
 ### 🏠 [Homepage](https://www.facebook.com/sanoj.jayathilaka1)
 
+### 👋 ScreenShot
+
+![alt text](https://raw.githubusercontent.com/00sanoj00/SL-COVID-19-Report/master/My_res/Group%209.png)
+
+### ✨ Download APK
+* Download: [Click](https://github.com/00sanoj00/SL-COVID-19-Report/releases)
+
 ## Author
 
 👤 **Sanoj Prabath Jayathilaka**
