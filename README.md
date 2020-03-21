@@ -30,6 +30,11 @@
 
 ## 🤝 Contributing
 
+[🤝Arimac](https://www.facebook.com/TeamArimac/)
+
+[🤝The API is used on the Health Promotion Bureau's website](https://hpb.health.gov.lk/en/api-documentation)
+
+
 Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/00sanoj00/SL-COVID-19-Report/issues). 
 
 ## Show your support
