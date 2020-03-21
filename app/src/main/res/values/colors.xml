@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+
+
+    <color name="one">#C8890F</color>
+    <color name="tow">#288F58</color>
+    <color name="thre">#7052FB</color>
+    <color name="fore">#F64A8F</color>
+    <color name="five">#349F66</color>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="qtyfontsize">22sp</dimen>
+    <dimen name="headtxtsize">20sp</dimen>
+    <dimen name="leftmargin">50dp</dimen>
+</resources>

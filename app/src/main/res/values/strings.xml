@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SL COVID-19 Report</string>
+    <string name="tcases">TOTAL CASES</string>
+    <string name="ncases">NEW CASES</string>
+    <string name="inhoss">HOSPITALS</string>
+    <string name="deths">DEATHS</string>
+    <string name="recovs">DISCHARGED</string>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="sflash" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:navigationBarColor">#7B58FB</item>
+        <item name="android:statusBarColor">#7B58FB</item>
+    </style>
+</resources>
