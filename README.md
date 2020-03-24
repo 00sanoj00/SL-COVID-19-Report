@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to SL COVID-19 Report 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-1.1-blue.svg?cacheSeconds=2592000" />
   <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">
     <img alt="License: Apache license 2.0" src="https://img.shields.io/badge/License-Apache license 2.0-yellow.svg" />
   </a>
