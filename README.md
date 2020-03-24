@@ -18,7 +18,7 @@
 ![alt text](https://raw.githubusercontent.com/00sanoj00/SL-COVID-19-Report/master/My_res/Group%209.png)
 
 ### ✨ Download APK
-* Download: [Click](https://github.com/00sanoj00/SL-COVID-19-Report/releases)
+* Download: [Click](https://00sanoj00.github.io/)
 
 ## Author
 
