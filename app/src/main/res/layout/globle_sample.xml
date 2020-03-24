@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:id="@+id/parentView"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <su.levenetc.android.textsurface.TextSurface
+        android:id="@+id/text_surface"
+        android:layout_width="@dimen/_317sdp"
+        android:layout_height="@dimen/_600sdp"/>
+
+
+    <com.lusfold.spinnerloading.SpinnerLoading
+        android:layout_width="wrap_content"
+        android:id="@+id/loading"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>

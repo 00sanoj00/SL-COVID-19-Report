@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+
+    <RelativeLayout
+        android:id="@+id/totoalshare"
+        android:background="@drawable/dialog_back"
+        android:layout_width="@dimen/_260sdp"
+        android:layout_height="@dimen/_375sdp">
+
+    <ImageView
+        android:layout_width="@dimen/_260sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:background="@drawable/ic_top"></ImageView>
+
+    <ImageView
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_width="@dimen/_260sdp"
+        android:layout_height="@dimen/_65sdp"
+        android:background="@drawable/ic_infometion"></ImageView>
+
+    <ImageView
+        android:layout_marginTop="@dimen/_120sdp"
+        android:layout_width="@dimen/_260sdp"
+        android:layout_height="@dimen/_65sdp"
+        android:background="@drawable/ic_infometion"></ImageView>
+
+    <ImageView
+        android:layout_marginTop="@dimen/_190sdp"
+        android:layout_width="@dimen/_260sdp"
+        android:layout_height="@dimen/_65sdp"
+        android:background="@drawable/ic_infometion"></ImageView>
+
+    <ImageView
+        android:layout_marginTop="@dimen/_260sdp"
+        android:layout_width="@dimen/_260sdp"
+        android:layout_height="@dimen/_65sdp"
+        android:background="@drawable/ic_infometion"></ImageView>
+
+    <Button
+        android:id="@+id/btn_okay"
+        android:layout_marginTop="@dimen/_330sdp"
+        android:text="OK"
+        android:textSize="@dimen/_20ssp"
+        android:textColor="@android:color/white"
+        android:layout_width="@dimen/_260sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:background="@drawable/ic_botom"></Button>
+
+        <TextView
+        android:id="@+id/textView4"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_15ssp"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:layout_marginLeft="@dimen/_7sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="COVID-19 Global" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_13ssp"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Situation Report" />
+
+        <Button
+            android:id="@+id/global"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:background="@drawable/ic_world"
+            android:textSize="@dimen/_15ssp" />
+
+
+        <TextView
+            android:id="@+id/textView6"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_14ssp"
+            android:layout_marginTop="@dimen/_53sdp"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Cases" />
+
+
+        <TextView
+            android:id="@+id/totoalcase_info"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_25ssp"
+            android:layout_marginTop="@dimen/_77sdp"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:layout_width="@dimen/_245sdp"
+            android:layout_height="wrap_content"
+            android:text="123,456,789" />
+
+
+        <TextView
+            android:id="@+id/textView7"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_14ssp"
+            android:layout_marginTop="@dimen/_123sdp"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Cases" />
+
+
+        <TextView
+            android:id="@+id/totoalnew_info"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_25ssp"
+            android:layout_marginTop="@dimen/_147sdp"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:layout_width="@dimen/_245sdp"
+            android:layout_height="wrap_content"
+            android:text="123,456,789" />
+
+
+        <TextView
+            android:id="@+id/textView8"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_14ssp"
+            android:layout_marginTop="@dimen/_193sdp"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Deths" />
+
+
+        <TextView
+            android:id="@+id/totoaldeth_info"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_25ssp"
+            android:layout_marginTop="@dimen/_217sdp"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:layout_width="@dimen/_245sdp"
+            android:layout_height="wrap_content"
+            android:text="123,456,789" />
+
+
+
+        <TextView
+            android:id="@+id/textView9"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_14ssp"
+            android:layout_marginTop="@dimen/_263sdp"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recovered" />
+
+
+        <TextView
+            android:id="@+id/totoalrec_info"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_25ssp"
+            android:layout_marginTop="@dimen/_287sdp"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:layout_width="@dimen/_245sdp"
+            android:layout_height="wrap_content"
+            android:text="123,456,789" />
+
+
+        <Button
+            android:id="@+id/it"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_55sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:background="@drawable/ic_share_white"
+            android:textSize="@dimen/_15ssp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

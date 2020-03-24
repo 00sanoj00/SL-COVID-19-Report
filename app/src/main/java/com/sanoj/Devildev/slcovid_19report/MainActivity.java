@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.FileProvider;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.Manifest;
 import android.content.DialogInterface;
@@ -21,7 +22,9 @@ import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -58,16 +61,24 @@ public class MainActivity extends AppCompatActivity  {
     private ConnectionStatusView statusView;
     private RequestQueue mQueue;
     private TextView totalcase,newcase,inhospital,deth,recovery,datesync;
-    private ConstraintLayout parentView;
+    private RelativeLayout parentView,totoalshearit;
     private static final int APP_PERMISSION_REQUEST = 102;
     ImageGenerator mImageGenerator;
-    private Button share;
+    private Button share,global;
     private Bitmap bitmap;
     private ImageView sample;
     Calendar mCurrentDate;
     Bitmap mGeneratedDateIcon;
     ImageView mDisplayGeneratedImage;
     private SharedPreferences.Editor editor;
+    private SwipeRefreshLayout swipeContainer;
+
+    private TextView totoalcase_dialog,newcase_dialog,deth_dialog ,recovery_dialog;
+
+    private String totalCasesset = "111";
+    private String newcaseset = "";
+    private String dethset = "";
+    private String dischargeset = "";
 
 
 
@@ -75,30 +86,29 @@ public class MainActivity extends AppCompatActivity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.sample);
 
         parentView = findViewById(R.id.parentView);
         editor = getSharedPreferences("MyPrefsFile", MODE_PRIVATE).edit();
 
+
+        swipeContainer = (SwipeRefreshLayout) findViewById(R.id.swipeContainer);
+
+
+
+
         try {
             SharedPreferences prefs = this.getSharedPreferences("MyPrefsFile", MODE_PRIVATE);
             String whymod = prefs.getString("1time", "");
-
             if(whymod.equals("")){
                 dialog();
             }else if(whymod.equals("ok")) {
-
             }else {
                 dialog();
             }
-
         }catch (Exception o){
-
-
         }
 
-
-///////////////////////
         mImageGenerator = new ImageGenerator(this);
         mDisplayGeneratedImage = (ImageView) findViewById(R.id.imgGenerated);
         mImageGenerator.setIconSize(50, 50);
@@ -113,11 +123,20 @@ public class MainActivity extends AppCompatActivity  {
         int mYear = mCurrentDate.get(Calendar.YEAR);
         int mMonth = mCurrentDate.get(Calendar.MONTH);
         final int mDay = mCurrentDate.get(Calendar.DAY_OF_MONTH);
-       mCurrentDate.set(mYear,mMonth,mDay);
+        mCurrentDate.set(mYear,mMonth,mDay);
         mGeneratedDateIcon = mImageGenerator.generateDateImage(mCurrentDate, R.drawable.empty_calendar);
         mDisplayGeneratedImage.setImageBitmap(mGeneratedDateIcon);
+        global=findViewById(R.id.global);
 
-///////////////////////////
+        global.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                btn_showMessage(share);
+            }
+        });
+
+
 
         TedPermission.with(this)
                 .setPermissionListener(permissionlistener)
@@ -135,6 +154,10 @@ public class MainActivity extends AppCompatActivity  {
         mQueue = Volley.newRequestQueue(this);
         jsonParse();
         statusView = findViewById(R.id.status);
+
+
+
+
 
         sample = findViewById(R.id.imgGenerated);
 
@@ -170,8 +193,18 @@ public class MainActivity extends AppCompatActivity  {
             }
         });
 
+        swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+
+                jsonParse();
+
+            }
+        });
 
     }
+
+
 
 
 
@@ -191,6 +224,16 @@ public class MainActivity extends AppCompatActivity  {
                             String deths = jsonArray.getString("local_deaths");
                             String discharge = jsonArray.getString("local_recovered");
                             String udatee = jsonArray.getString("update_date_time");
+                            int totoalcaseesx = jsonArray.getInt("global_total_cases");
+                            int newcasessx = jsonArray.getInt("global_new_cases");
+                            int dethsx = jsonArray.getInt("global_deaths");
+                            int dischargex = jsonArray.getInt("global_recovered");
+
+
+                            totalCasesset = String.format("%,d", totoalcaseesx);
+                            newcaseset = String.format("%,d", newcasessx);
+                            dethset = String.format("%,d", dethsx);
+                            dischargeset = String.format("%,d", dischargex);
 
                             totalcase.setText(totoalcasees);
                             newcase.setText(newcasess);
@@ -201,6 +244,7 @@ public class MainActivity extends AppCompatActivity  {
 
 
                             statusView.setStatus(Status.COMPLETE);
+                            swipeContainer.setRefreshing(false);
                         } catch (JSONException e) {
                             e.printStackTrace();
                             statusView.setStatus(Status.ERROR);
@@ -278,6 +322,70 @@ public class MainActivity extends AppCompatActivity  {
         SharedPreferences mSharedPreferences = getSharedPreferences("CheckItem", MODE_PRIVATE);
         return mSharedPreferences.getBoolean("item", false);
 
+    }
+    public void btn_showMessage(View view){
+        final AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this,R.style.CustomDialog);
+        View mView = getLayoutInflater().inflate(R.layout.dialogbox,null);
+        Button btn_okay = (Button)mView.findViewById(R.id.btn_okay);
+        Button funny = (Button)mView.findViewById(R.id.global);
+        Button share = (Button)mView.findViewById(R.id.it);
+        totoalshearit = mView.findViewById(R.id.totoalshare);
+        totoalcase_dialog = mView.findViewById(R.id.totoalcase_info);
+        newcase_dialog = mView.findViewById(R.id.totoalnew_info);
+        deth_dialog=mView.findViewById(R.id.totoaldeth_info);
+        recovery_dialog=mView.findViewById(R.id.totoalrec_info);
+        totoalcase_dialog.setText(totalCasesset);
+        newcase_dialog.setText(newcaseset);
+        deth_dialog.setText(dethset);
+        recovery_dialog.setText(dischargeset);
+
+
+        alert.setView(mView);
+        final AlertDialog alertDialog = alert.create();
+        alertDialog.setCanceledOnTouchOutside(false);
+        funny.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, globle_sample.class));
+            }
+        });
+        share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bitmap = ScreenshotUtil.getInstance().takeScreenshotForView(totoalshearit);
+
+                Date currentTime = Calendar.getInstance().getTime();
+                String mPath = Environment.getExternalStorageDirectory().toString() + "/" +currentTime+"new2.png";
+                FileOutputStream fos;
+                try {
+                    fos = new FileOutputStream(mPath);
+                    bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
+                    Toast.makeText(MainActivity.this, mPath, Toast.LENGTH_SHORT).show();
+                    fos.flush();
+                    fos.close();
+
+                    Log.e("ImageSave", "Saveimage");
+                } catch (FileNotFoundException e) {
+                    Log.e("GREC", e.getMessage(), e);
+                } catch (IOException e) {
+                    Log.e("GREC", e.getMessage(), e);
+                }
+
+                Uri bmpUri = FileProvider.getUriForFile(MainActivity.this, BuildConfig.APPLICATION_ID + ".provider", new File(mPath));
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.putExtra(Intent.EXTRA_STREAM, bmpUri);
+                intent.setType("image/*");
+                startActivity(Intent.createChooser(intent, "Share Image:"));
+            }
+        });
+        btn_okay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //myCustomMessage.setText(txt_inputText.getText().toString());
+                alertDialog.dismiss();
+            }
+        });
+        alertDialog.show();
     }
 
 }

@@ -30,6 +30,12 @@ allprojects {
         maven { url 'https://jitpack.io' }
     }
 }
+allprojects {
+    repositories {
+        // requires Gradle v4.1+
+        google()
+    }
+}
 
 task clean(type: Delete) {
     delete rootProject.buildDir

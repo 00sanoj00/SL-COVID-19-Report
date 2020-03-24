@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="qtyfontsize">22sp</dimen>
-    <dimen name="headtxtsize">20sp</dimen>
-    <dimen name="leftmargin">50dp</dimen>
+    <dimen name="tab">@dimen/_275sdp</dimen>
+    <dimen name="tabhite">@dimen/_98sdp</dimen>
+    <dimen name="serfusone">@dimen/_14sdp</dimen>
+    <dimen name="serfustow">@dimen/_7sdp</dimen>
+    <dimen name="serfusmessage">@dimen/_7sdp</dimen>
 </resources>
